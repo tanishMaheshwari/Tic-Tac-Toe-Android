@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://p3hfu7hshfhl"]
+
+[ext_resource type="Texture2D" uid="uid://bwos4jkf24lix" path="res://Sprites/Blank128x128.png" id="1_5tm6h"]
+[ext_resource type="Script" path="res://Scripts/Square.gd" id="1_221pu"]
+[ext_resource type="Texture2D" uid="uid://ij7vxtdwfgwj" path="res://Sprites/Cross.png" id="2_asjdd"]
+[ext_resource type="Texture2D" uid="uid://dak70j27mtd7s" path="res://Sprites/Naughts_2.png" id="3_dk447"]
+
+[node name="Square" type="TouchScreenButton"]
+texture_normal = ExtResource("1_5tm6h")
+script = ExtResource("1_221pu")
+
+[node name="Naught" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(64, 64)
+texture = ExtResource("3_dk447")
+
+[node name="Cross" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(64, 64)
+rotation = 0.785398
+scale = Vector2(1.355, 1.355)
+texture = ExtResource("2_asjdd")

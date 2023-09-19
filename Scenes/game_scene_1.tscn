@@ -1,0 +1,123 @@
+[gd_scene load_steps=7 format=3 uid="uid://40uvnx1tjmkb"]
+
+[ext_resource type="Script" path="res://Scenes/game_scene_1.gd" id="1_8kt5m"]
+[ext_resource type="FontFile" uid="uid://dfbh8en1cype4" path="res://Fonts/Born2bSportyV2.ttf" id="1_jm5q5"]
+[ext_resource type="Texture2D" uid="uid://dmgvupadrdtk3" path="res://Sprites/9eu0y4ts.bmp" id="2_wkrvi"]
+[ext_resource type="PackedScene" uid="uid://p3hfu7hshfhl" path="res://Utility/square.tscn" id="4_vomgp"]
+[ext_resource type="Texture2D" uid="uid://e48bhyi8ckvj" path="res://Sprites/Replay96x96.png" id="5_w7lqu"]
+[ext_resource type="Texture2D" uid="uid://83u2wvrc3j0a" path="res://Sprites/Exit96x96.png" id="6_4iuml"]
+
+[node name="GameScene1" type="Node2D"]
+script = ExtResource("1_8kt5m")
+
+[node name="Label2" type="Label" parent="."]
+z_index = 1
+offset_left = 2.0
+offset_top = 170.0
+offset_right = 578.0
+offset_bottom = 282.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_jm5q5")
+theme_override_font_sizes/font_size = 96
+text = "Player 1 Wins!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 578.0
+offset_bottom = 1020.0
+color = Color(0.588235, 1, 0.486275, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 40.0
+offset_right = 547.0
+offset_bottom = 170.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_jm5q5")
+theme_override_font_sizes/font_size = 81
+text = "Blue - Red
+0   :   0"
+horizontal_alignment = 1
+
+[node name="Board" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-88, -224)
+scale = Vector2(1.48929, 1.51073)
+texture = ExtResource("2_wkrvi")
+offset = Vector2(250, 577.445)
+
+[node name="Square" parent="Board" instance=ExtResource("4_vomgp")]
+position = Vector2(96.6903, 421.651)
+scale = Vector2(0.797359, 0.793146)
+action = "1"
+
+[node name="Square2" parent="Board" instance=ExtResource("4_vomgp")]
+position = Vector2(198.752, 419.004)
+scale = Vector2(0.797359, 0.834517)
+action = "2"
+
+[node name="Square3" parent="Board" instance=ExtResource("4_vomgp")]
+position = Vector2(300.814, 415.694)
+scale = Vector2(0.839326, 0.834517)
+action = "3"
+
+[node name="Square4" parent="Board" instance=ExtResource("4_vomgp")]
+position = Vector2(91.3186, 534.842)
+scale = Vector2(0.832135, 0.744675)
+action = "4"
+
+[node name="Square5" parent="Board" instance=ExtResource("4_vomgp")]
+position = Vector2(198.752, 529.546)
+scale = Vector2(0.797359, 0.793146)
+action = "5"
+
+[node name="Square6" parent="Board" instance=ExtResource("4_vomgp")]
+position = Vector2(300.814, 530.208)
+scale = Vector2(0.881292, 0.786046)
+action = "6"
+
+[node name="Square7" parent="Board" instance=ExtResource("4_vomgp")]
+position = Vector2(91.3186, 630.822)
+scale = Vector2(0.832135, 0.868787)
+action = "7"
+
+[node name="Square8" parent="Board" instance=ExtResource("4_vomgp")]
+position = Vector2(198.752, 635.456)
+scale = Vector2(0.832135, 0.827416)
+action = "8"
+
+[node name="Square9" parent="Board" instance=ExtResource("4_vomgp")]
+position = Vector2(300.814, 628.836)
+scale = Vector2(0.881292, 0.868787)
+action = "9"
+
+[node name="WB" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 55.0
+offset_top = 480.0
+offset_right = 513.0
+offset_bottom = 488.0
+
+[node name="WinBar" type="ColorRect" parent="WB"]
+visible = false
+layout_mode = 0
+offset_left = 3.0
+offset_top = -11.0
+offset_right = 451.0
+offset_bottom = 13.0
+color = Color(0, 0, 0, 1)
+
+[node name="GameMenu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="GameMenu"]
+position = Vector2(120, 288)
+texture_normal = ExtResource("5_w7lqu")
+action = "replay"
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="GameMenu"]
+position = Vector2(360, 288)
+texture_normal = ExtResource("6_4iuml")
+action = "exit"

@@ -1,0 +1,90 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Tic-Tac-Toe-Mobile-2"
+run/main_scene="res://Scenes/node_2d.tscn"
+config/features=PackedStringArray("4.1", "Mobile")
+boot_splash/image="res://Sprites/BootSplash.png"
+config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://Scripts/global.gd"
+
+[display]
+
+window/size/viewport_width=576
+window/size/viewport_height=1024
+window/size/window_width_override=432
+window/size/window_height_override=768
+window/stretch/mode="viewport"
+window/handheld/orientation=1
+
+[dotnet]
+
+project/assembly_name="Test 2"
+
+[input]
+
+1={
+"deadzone": 0.5,
+"events": []
+}
+2={
+"deadzone": 0.5,
+"events": []
+}
+3={
+"deadzone": 0.5,
+"events": []
+}
+4={
+"deadzone": 0.5,
+"events": []
+}
+5={
+"deadzone": 0.5,
+"events": []
+}
+6={
+"deadzone": 0.5,
+"events": []
+}
+7={
+"deadzone": 0.5,
+"events": []
+}
+8={
+"deadzone": 0.5,
+"events": []
+}
+9={
+"deadzone": 0.5,
+"events": []
+}
+exit={
+"deadzone": 0.5,
+"events": []
+}
+replay={
+"deadzone": 0.5,
+"events": []
+}
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[rendering]
+
+renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
